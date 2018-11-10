@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SignIn/SignUp</title>
+  <link rel="icon" href="logo.png"/>	
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+	function forgot() {
+			swal({
+			  title: "Forgot Password ?",
+			  text: "Enter your mail address to recover your password",
+			  content: "input",
+			  icon: "success",
+			  button: "Aww yiss!",
+				});
+	}
+  </script>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+</head>
+<body>
+  <div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+    <div class="login-form">
+      <form class="sign-in-htm" action="./api/user/login.php" method="GET">
+        <div class="group">
+          <label for="user" class="label">Email</label>
+          <input id="username" name="username" type="email" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="password" name="password" type="password" pattern=".{8,}"  class="input" data-type="password">
+        </div>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check"><span class="icon"></span> Keep me Signed in</label>
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign In">
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a onclick=forgot() style="cursor:pointer;">Forgot Password?</a>
+        </div>
+      </form>
+      <form class="sign-up-htm" action="./api/user/signup.php" method="POST">
+        <div class="group">
+          <label for="user" class="label">Email</label>
+          <input id="username" name="username" type="email" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label">Password</label>
+          <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <label for="pass" class="label" >Confirm Password</label>
+          <input id="pass" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign Up">
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <label for="tab-1">Already Member?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  
+  
+</body>
+</html>
