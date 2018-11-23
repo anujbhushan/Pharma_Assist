@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Request Order</title>
+        <script src="js/form.js" ></script>
+        <link rel='stylesheet' type='text/css' href='css/order.css' />
+    </head>
+    <body>
+        <a id="back" href="../index.html"> <button id="backBtn">  To Dashboard </button> </a>
+        <div class="form" >
+            <form class="new_ord" method="POST" action="order.php">
+                <span class=" header"><b>New Request Order</b></span><br><br>
+                <label>Distributor Name <br> <input class="inp" name="dist"  placeholder="Enter Customer Name" type="text"></label><br><br>
+                <label><b>Order Details</b></label><br>
+                <label >Medicine Name</label><label style="margin-left: 180px;">Unit Price</label>  <label style="float:right;margin-right:30px;" >Quantity</label><br>
+                <div id="container">
+                    <input class="m_name inp"  name="mname[]" type="text"  placeholder="Enter medicine name " >
+                    <input class="m_quote inp"  name="price[]" type="number" min=1 placeholder="Enter unit price ">
+                    <input class="m_qty"  name="qty[]"  min=1 type="number"><br>
+                </div>
+                <button  id="Nrow" type="button" onclick="AddOrderRow()">+ More</button><br>
+                <input type="submit" id="submit" value="Continue">
+            </form>
+        </div>
+    </body>
+</html>

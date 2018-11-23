@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PES MEDS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="storekeeper.css">
+  <style>
+    body {
+        background-image: url("/images/bkg7.jpg");
+        background-color: #cccccc;
+				}
+				#dash{
+					font-size: 60px;
+					font-weight: bold;
+					font-family:  'Montserrat', 'Lucida Sans', Arial, sans-serif;
+				}
+
+    </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/js/index.js"></script>
+</head>
+<body>
+
+	<div class="jumbotron" style="background-image: url(images/pharmacy.jpg); background-size: contain; vertical-align: text-top; ">
+	  <h1 style="color: white">PHARMA-ASSIST</h1> 
+	</div>
+	  
+	<div id="pricing" class="container-fluid">
+	  <div class="text-center">
+	    <h1 id="dash">Dashboard</h1><br>
+	  </div>
+	  <div class="row slideanim">
+	    <div class="col-sm-3 col-xs-12" >
+	      <div class="panel panel-default text-center" >
+	        <div class="panel-heading" style = "background-color: #2a93d5">
+	          <h1>Billing <span class = "glyphicon glyphicon-list-alt"/></h1>
+	        </div>
+	        <div class="panel-body">
+	          <a href="/transactions/bill.html" ><button class="btn btn-lg buttonFade" >New Bill</button></a><br>
+	          <a href="/transactions/prevTransaction.php"><button class="btn btn-lg buttonFade">Previous Transactions</button></a><br>
+
+	        </div>
+	      </div>      
+	    </div>     
+	    <div class="col-sm-3 col-xs-12">
+	      <div class="panel panel-default text-center">
+	        <div class="panel-heading" style = "background-color: #2a93d5">
+	          <h1>Orders <span class="glyphicon glyphicon-shopping-cart"/></h1>
+	        </div>
+	        <div class="panel-body">
+	          <a href="/transactions/order.html" ><button class="btn btn-lg buttonFade">Place Order</button></a><br>
+	          <a href="/transactions/trackOrder.php" ><button class="btn btn-lg buttonFade">Track Order</button></a><br>
+	          <a href="/transactions/prevOrder.php" ><button class="btn btn-lg buttonFade">Previous Orders</button></a><br>
+	          
+	        </div>
+	      </div>      
+	    </div>       
+	    <div class="col-sm-3 col-xs-12">
+	      <div class="panel panel-default text-center">
+	        <div class="panel-heading" style = "background-color: #2a93d5">
+	          <h1>Inventory <span class="glyphicon glyphicon-new-window"></span></h1>
+	        </div>
+	        <div class="panel-body">
+	          <a href="/transactions/updateInventoryForm.html" ><button class="btn btn-lg buttonFade">Update Inventory</button></a><br>	
+	          <a href="/transactions/search.php" ><button class="btn btn-lg buttonFade">Search</button></a><br>
+	          <a href="/transactions/outOfStock.php" ><button class="btn btn-lg buttonFade">Out of Stock</button></a><br>
+	        </div>
+	      </div>      
+	    </div>
+	    <div class="col-sm-3 col-xs-12">
+	      <div class="panel panel-danger text-center">
+	        <div class="panel-heading">
+	          <h1>Alerts <span class="badge"></span></h1>
+	        </div>
+	        <div class="panel-body" >
+	        	<div class="list-group1" id="alerts">
+							
+						</div>
+						<iframe id="ifr1" src = "http://localhost/alerts/ordIndex.php" width="200" height="100" style="display:none"></iframe> 
+						<iframe id="ifr" src = "http://localhost/alerts/medIndex.php" width="200" height="100" style="display:none"></iframe> 
+						<iframe id="ifr" src = "http://localhost/alerts/recIndex.php" width="200" height="100" style="display:none"></iframe> 
+	        </div>
+	      </div>      
+	    </div>     
+	  </div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Update Inventory</title>
+        <script src="js/form.js" ></script>
+        <link rel='stylesheet' type='text/css' href='css/bill.css' />
+    </head>
+    <body>
+        <a id="back" href="../index.html"> <button id="backBtn">  To Dashboard </button> </a>
+        <div class="form" >
+            <form class="updateInv" method="POST" action="updateInventory.php">
+                <span class=" header"><b>ADD TO Inventory</b></span><br><br>
+                <label>Medicine Name <br><br> <input class="inp" name="med_name" placeholder="Enter Medicine Name" type="text"></label><br><br>
+                <label>Medicine Price <br><br> <input class="inp" name="med_price" placeholder="Enter Medicine price" type="number"></label><br><br>
+				<label>Quantity <br><br> <input class="inp" name="med_qty" placeholder="Enter Quantity" type="number"></label><br><br>
+				<label>Manufacture Date<br><br> <input class="inp" name="med_mfg" placeholder="Enter Manufacture Date" type="date"></label><br><br>
+				<label>Expiry Date <br><br> <input class="inp" name="med_exp" placeholder="Enter Expiry Date" type="date"></label><br><br>
+                <input type="submit" id="submit" value="Continue"><br>
+            </form>
+        </div>
+    </body>
+</html>

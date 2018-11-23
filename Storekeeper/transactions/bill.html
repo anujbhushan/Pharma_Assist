@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>New Bill</title>
+        <script src="js/form.js" ></script>
+        <link rel='stylesheet' type='text/css' href='css/bill.css' />
+    </head>
+    <body>
+        <a id="back" href="../index.html"> <button id="backBtn">  To Dashboard </button> </a>
+        <div class="form" >
+            <form class="new_ord" method="POST" action="invoice.php">
+                <span class=" header"><b>New Purchase</b></span><br><br>
+                <label>Customer Name <br> <input class="inp" name="cust" placeholder="Enter Customer Name" type="text"></label><br>
+                <label>Payment</label>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><input name="pay" type="radio" value="Cash" > Cash</label>
+                <label><input name="pay" type="radio" value="Card" > Card</label><br><br>
+                <label><b>Purchase Details</b></label><br>
+                <label >Medicine Name</label> <label style="float:right;margin-right:30px;" >Quantity</label><br>
+                <div id="container">
+                    <div id="col">
+                        <input class="m_name inp" type="text" name="Mname[]" placeholder="Enter medicine name here" >
+                        <input class="m_qty" name="Mqty[]" min=1 type="number">
+                    </div>
+                </div>
+                <button  id="Nrow" type="button" onclick="AddRow()">+ More</button><br>
+                <input type="submit" id="submit" value="Continue">
+            </form>
+        </div>
+    </body>
+</html>
